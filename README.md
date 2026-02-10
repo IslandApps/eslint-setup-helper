@@ -25,6 +25,8 @@ Configures VS Code global settings for optimal ESLint integration.
 - Configures ESLint working directories for background scanning
 - Creates automatic backup of existing settings
 
+> **Important:** This script only needs to be run **once**. It modifies your global VS Code user settings, which eliminates the need to create a `.vscode/settings.json` file in every single project.
+
 **Usage:**
 ```bash
 # Run from anywhere
@@ -64,12 +66,13 @@ python eslint_new_project.py
 For a complete setup on a new React TypeScript project:
 
 ```bash
-# 1. Set up the project
+# 1. (One-time setup) Configure VS Code global settings
+# Run this once to apply settings to all current and future projects
+python eslint_setup_helper.py
+
+# 2. (Per project) Set up the specific project
 cd your-project-folder
 python eslint_new_project.py
-
-# 2. Configure VS Code
-python eslint_setup_helper.py
 
 # 3. Restart VS Code and ESLint
 # In VS Code: Ctrl+Shift+P → "ESLint: Restart ESLint Server"
