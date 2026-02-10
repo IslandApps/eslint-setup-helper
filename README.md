@@ -17,7 +17,26 @@ Before running these scripts, ensure you have the following installed:
 
 ## Scripts
 
-### 1. `eslint_new_project.py`
+### 1. `eslint_setup_helper.py`
+Configures VS Code global settings for optimal ESLint integration.
+
+**What it does:**
+- Enables ESLint validation for `.ts` and `.tsx` files
+- Configures ESLint working directories for background scanning
+- Creates automatic backup of existing settings
+
+**Usage:**
+```bash
+# Run from anywhere
+python eslint_setup_helper.py
+```
+
+**Requirements:**
+- VS Code installed and opened at least once
+
+---
+
+### 2. `eslint_new_project.py`
 Configures ESLint for a new or existing React/TypeScript project.
 
 **What it does:**
@@ -37,25 +56,6 @@ python eslint_new_project.py
 **Requirements:**
 - Node.js and npm installed
 - Valid `package.json` in current directory
-
----
-
-### 2. `eslint_setup_helper.py`
-Configures VS Code global settings for optimal ESLint integration.
-
-**What it does:**
-- Enables ESLint validation for `.ts` and `.tsx` files
-- Configures ESLint working directories for background scanning
-- Creates automatic backup of existing settings
-
-**Usage:**
-```bash
-# Run from anywhere
-python eslint_setup_helper.py
-```
-
-**Requirements:**
-- VS Code installed and opened at least once
 
 ---
 
